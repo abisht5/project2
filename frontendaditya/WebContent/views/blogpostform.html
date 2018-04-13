@@ -1,0 +1,126 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<title>Insert title here</title>
+
+</head>
+<style>
+ .ab{
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+    
+    }
+    
+   textarea{
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+    
+    
+/* .cancelbtn {
+color: white;
+    padding: 15px 50px;
+    margin: 30px 0;
+    border: none;
+    cursor: pointer;
+   background-color: #f44336;
+    width:20%; */
+     
+} 
+div.gallery img {
+    width: 70%;
+    height: 400px;
+  
+}
+.signupbtn {
+color: white;
+    padding: 15px 50px;
+    margin: 30px 0;
+    border: none;
+    cursor: pointer;
+background-color: #4CAF50;
+    float: center;
+    width: 20%;
+}
+
+body{
+	background-image: url("images/login.jpg");
+
+}
+</style>
+
+<body>
+
+<form> <!-- action="perform_login" method="post"> -->
+
+<div class="container center_div">
+<div class="col-md-6">
+<div class="container">
+           
+  <br><br><br><br><br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+				<label for="name">Enter Blog Title</label><br>
+				<input class="ab" ng-model="blogPost.title">&nbsp;&nbsp;&nbsp;
+			<br>
+				<label for="password">Discription</label><br>
+				<textarea ng-model="blogPost.description"></textarea><br>
+				
+				
+			
+				<input type="submit" class="btn btn-info"  value="Post Blog" ng-click="saveBlogPost()">
+				
+				
+		</div>
+		</div>
+		<div class="row">
+<div class="col-md-6">
+<div class="gallery">
+  <img src="images\blog3.jpg">
+</div>
+</div>
+		</div>
+
+
+	</form>
+</body>
+</html>
+
+
+<!-- {{message}}
+
+
+<form>
+<table>
+
+<tr>
+<td>Enter Blog Title</td>
+<td><input ng-model="blogPost.title"></td>
+</tr>
+
+<tr>
+<td>Enter Blog Description</td>
+<td><textarea ng-model="blogPost.description"></textarea></td>
+</tr>
+
+<td>
+<button class="btn btn-default" ng-click="saveBlogPost()">Post Blog</button>
+</td>
+
+</table>
+</form> -->

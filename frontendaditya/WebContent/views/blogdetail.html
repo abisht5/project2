@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.i {
+    
+    width: 700px;
+    border: 3px solid black;
+    padding: 25px;
+   
+}
+
+
+</style>
+</head>
+<body>
+<div class="row">
+	<div class="container">
+	<div class="i">
+		<div >
+			<div >
+				<div><b>Blog Title:</b>{{blogPost.title}}</div>
+				<span><strong>Created By:</strong>{{blogPost.createdBy.username}}</span>
+				<span><strong>On: </strong>{{blogPost.postedOn |
+					date:'medium'}}</span>
+
+
+			</div>
+<br>
+			<div><b>Blog Discription:</b><br>{{blogPost.description}}</div>
+			
+
+		</div><br>
+		<form>
+<textarea rows="3" cols="20" ng-model="blogComment.body"></textarea><br>
+<button ng-click="addComment()" class="btn btn-primary">Post Comment</button>
+</form><br>
+
+	</div>
+	</div>
+</div>
+<br>
+
+<div class="row">
+
+<div class="container">
+<div class="i">
+
+<a href="" ng-click="getBlogComments(blogPost.id)" style="color:#008000">Show Blog Comments</a>
+<ul ng-show="showComments">
+<li ng-repeat="comment in blogComments" style="list-style: none">
+
+<div>
+
+<table class="table">
+
+
+<tr>
+<td>Comment:{{comment.body}}</td>
+<td><span><strong>Commented By:</strong>{{comment.commentedBy.username}}</span></td>
+<td><span><strong>Commented On:</strong>{{comment.commentedOn | date: 'MM/dd/yyyy'}}</span></td>
+</tr>
+</table>
+
+<!-- {{comment.body}}
+<span><strong>Commented By:</strong>{{comment.commentedBy.username}}</span>
+<span><strong>Commented On:</strong>{{comment.commentedOn | date: 'MM/dd/yyyy'}}</span>
+ -->
+
+</div>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

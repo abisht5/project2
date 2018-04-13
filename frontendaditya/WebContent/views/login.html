@@ -1,0 +1,34 @@
+<div>
+{(message)}
+{(error.message)}
+
+<br>
+<br>
+<br>
+<br>
+
+
+<form>
+
+<div class="container center_div">
+<div class="form-group form-group-sm">
+<div class="col-xs-2">
+ <div>
+    <label for="username">USERNAME</label>
+    <input type="username" class="form-control" id="username" ng-model="user.username">
+  </div>
+  <div class="form-group">
+    <label for="password">PASSWORD</label>
+    <input type="password" class="form-control" id="password" ng-model="user.password">
+  </div>
+
+
+
+
+
+<input type="submit" class="btn btn-info"value="login" ng-click="login()">
+
+</div>
+</div>
+</form>
+</div>

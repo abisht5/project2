@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.k {
+    
+    width: 800px;
+    border: 3px solid black;
+    padding: 25px;
+    margin: 25px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+Search <input ng-model="blogTitle"><br><br>
+<div class="table-responsive" ng-show="currentUser.role=='Admin'">
+<div class="k">
+List of Blog Posts Waiting for approval
+<table class="table">
+<tr><th>Recent Posts</th></tr>
+<tr ng-repeat="blogPost in blogsWaitingForApproval | orderBy:'time':true | filter:blogTitle">
+
+<td><a href="#getBlogForApproval/{{blogPost.id}}">{{blogPost.title}}</a></td>
+<td>Created By: {{blogPost.createdBy.username}}</td>
+<td>Posted On:  {{blogPost.postedOn | date:'MM/dd/yyyy HH:mm'}}</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="table-responsive">
+<div class="k">
+List of Blog Posts 
+<table class="table">
+<tr><th>Recent Posts</th></tr>
+<tr ng-repeat="blogPost in blogsApproved | orderBy:'time':true | filter:blogTitle">
+
+<td><a href="#getBlogDetail/{{blogPost.id}}">{{blogPost.title}}</a></td>
+<td>Created By: {{blogPost.createdBy.username}}</td>
+<td>Posted On:  {{blogPost.postedOn | date:'MM/dd/yyyy HH:mm'}}</td>
+</tr>
+</table>
+</div>
+
+</div>
+</div>
+</body>
+</html>

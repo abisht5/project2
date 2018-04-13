@@ -1,0 +1,26 @@
+<span>{{message}}</span>
+
+<br>
+<br>
+<br>
+<br>
+
+<form>
+
+<label>Enter job Title</label>
+<input type="text" class="form-control" ng-model="job.jobTitle">
+<label>Job Description</label>
+ <textarea class="form-control" ng-model="job.jobDescription"></textarea>
+ <label>Years of Experience</label>
+ <input type="text"class="form-control" ng-model="job.yrsOfExp">
+<label>Enter Salary</label>
+<input type="text" class="form-control" ng-model="job.salary">
+<label>Enter skills required</label>
+<input type="text"  class="form-control" ng-model="job.skillsRequired">
+<label>Enter Location</label>
+<input type="text" class="form-control" ng-model="job.location"><br>
+<label>Enter company name</label>
+<input type="text" class="form-control" ng-model="job.companyName"><br>
+
+<input type="submit" value="savejob" class="btn btn-info" ng-click="saveJob()">
+</form>
